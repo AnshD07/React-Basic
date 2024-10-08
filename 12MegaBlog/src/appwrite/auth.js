@@ -17,7 +17,6 @@ export class AuthService {
     async createAccount({ email, password, name }) {
         //* this method also can be failed so try and catch is good practice
         try {
-
             const userAccount = await this.account.create(ID.unique(), email, password, name);
             if (userAccount) {
                 //* call another method
