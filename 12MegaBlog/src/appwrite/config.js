@@ -21,7 +21,6 @@ export class Service {
                 conf.appwriteDatabaseId,
                 conf.appwriteBucketId,
                 slug,
-
                 {
                     title,
                     content,
@@ -80,6 +79,7 @@ export class Service {
         }
     }
 
+
     async getPosts(queries = [Query.equal("status", "active")]) { //! jenu status active hoy ejj file apvani bhai 
         try {
             return await this.databases.listDocuments(
@@ -93,7 +93,7 @@ export class Service {
     }
 
     // file Upload Services (method)
-    async uploadFile(file){
+    async uploadFile(file) {
         try {
             return await this.bucket.createFile(
                 conf.appwriteBucketId,
@@ -105,7 +105,7 @@ export class Service {
         }
     }
 
-    async deleteFile(fileId){
+    async deleteFile(fileId) {
         try {
             await this.bucket.deleteFile(
                 conf.appwriteBucketId,
@@ -117,7 +117,7 @@ export class Service {
         }
     }
 
-    getFilePreview(fileId){
+    getFilePreview(fileId) {
         return this.bucket.getFilePreview(
             conf.appwriteBucketId,
             fileId
