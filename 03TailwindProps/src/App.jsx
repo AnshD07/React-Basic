@@ -6,7 +6,7 @@ function App() {
 
   let myObj = {
     username: "RajDholakiya",
-    networth: "200000000000000000000 dollar"
+    networth: "200000000000000000000 dollar from raj dholakiya"
   }
 
   return (
